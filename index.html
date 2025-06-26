@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Scheduler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Scheduled Tasks</h1>
+    <a href="{{ url_for('add_task') }}">Add New Task</a>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <strong>{{ task.title }}</strong> at {{ task.time }}
+                <a href="{{ url_for('delete_task', index=loop.index0) }}">[Delete]</a>
+            </li>
+        {% else %}
+            <li>No tasks scheduled.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial;
+    margin: 50px;
+    background-color: #f4f4f4;
+}
+
+a {
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
